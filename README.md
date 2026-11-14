@@ -28,15 +28,16 @@ can flip inside the conversation.
 
 ## 安装 / Install
 
-DSH 0.2.x 的 bundle 安装方式（按你本机的 profile 调整路径）：
+这是一个 **bundle**（`package.json` 里带 `dsh.bundle.patch` + `dsh.client`），
+不是普通 npm 包。安装它需要一个能装 bundle 的 DSH 环境：
 
-```bash
-# 在本仓库根目录
-dsh plugin install --bundle .
-```
+1. 把本仓库克隆/解压到本机任意目录（路径不要带空格更稳）；
+2. 在 DSH 里用 **插件管理器**把这个目录作为 bundle 安装（面板操作，或调用
+   `plugin_manager` 的 `install_bundle`）；
+3. 安装后在 `插件` 面板里应能看到 **Skill Manager**，输入框工具条上会多一枚胶囊。
 
-或者把本目录放进 profile 的 bundle 列表后重载 DSH。安装后在
-`插件` 面板里应能看到 **Skill Manager**。
+> 说明：本文档不写死 CLI 命令 —— 不同 DSH 版本的插件子命令名称不一样，
+> 以你本机插件面板/管理器的实际入口为准，避免照着一行跑不通的命令来回试。
 
 本插件无第三方运行时依赖，只用 `node:fs` 与 DSH 自己的 Cordis 接口。
 
