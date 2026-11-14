@@ -1,0 +1,59 @@
+{
+  "name": "dsh-plugin-skill-manager",
+  "version": "0.1.0",
+  "private": false,
+  "description": "Per-session skill management for DeepSeek Harness: master switch, per-message skill shortlisting with group-first matching, skill viewer, and reusable groups",
+  "license": "MIT",
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./client": "./lib/client.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib/index.js",
+    "lib/state.js",
+    "lib/auto.js",
+    "lib/gate.js",
+    "lib/client.js",
+    "cordis.patch.yml",
+    "locale/*.json",
+    "icon.svg",
+    "README.md",
+    "lib/group-match.js",
+    "LICENSE"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-conversation",
+        "@deepseek-ai/dsh-client-ui-model-selection"
+      ]
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/C1iEr/dsh-plugin-skill-manager.git"
+  },
+  "homepage": "https://github.com/C1iEr/dsh-plugin-skill-manager#readme",
+  "bugs": {
+    "url": "https://github.com/C1iEr/dsh-plugin-skill-manager/issues"
+  },
+  "author": "C1iEr",
+  "keywords": [
+    "dsh",
+    "deepseek-harness",
+    "plugin",
+    "skills",
+    "agent",
+    "cordis"
+  ]
+}

@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Skill Manager",
+    "description": "Per-session skill management. Open the model menu (the model name above the input box) to find Enable skill catalog and Auto-select skills, each with a sliding switch like Enable agent teamwork. Below the input box a Skill Manager bar opens the full panel: every installed skill with its own switch, quick groups for one-click batch toggling, a search box, and a click on any skill name to read its full content. State is per session, so turning a skill off in one conversation leaves other conversations untouched; groups are shared across the profile. When the catalog is off, the model in that session sees no skill catalog and the skill tool refuses to load anything, so nothing is read. Auto-select scores each message against skill names, descriptions and when-to-use hints, lists only the matches for that turn, and falls back to the full list when nothing matches. With everything at its default the plugin steps aside and leaves DSH's built-in skill behavior untouched. Requires enabling the bundle once in Settings > Plugins; it adds no model requests of its own."
+  }
+}

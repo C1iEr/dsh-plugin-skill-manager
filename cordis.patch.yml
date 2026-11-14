@@ -1,0 +1,8 @@
+# Skill Manager bundle patch
+#
+# 这一层只做一件事：把宿主半边插到 Cordis 树上。
+# 浏览器半边由 package.json 里的 `dsh.client` 声明，走 client module 通道，
+# 不需要在这里插行。
+- insert:
+    - id: skill-manager
+      name: 'dsh-plugin-skill-manager'
